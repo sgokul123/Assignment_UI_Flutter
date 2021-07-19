@@ -1,0 +1,44 @@
+{
+  "goalOfActivation": [
+    {
+      "id": "1",
+      "name": "To be selected"
+    },
+    {
+      "id": "2",
+      "name": "To be joined"
+    },
+    {
+      "id": "3",
+      "name": "To be promoted"
+    }
+  ],
+  "monthlyIncome": [
+    {
+      "id": "1",
+      "name": "5000"
+    },
+    {
+      "id": "2",
+      "name": "8000"
+    },
+    {
+      "id": "3",
+      "name": "12000"
+    }
+  ],
+  "monthlyExpense": [
+    {
+      "id": "1",
+      "name": "2000"
+    },
+    {
+      "id": "2",
+      "name": "4000"
+    },
+    {
+      "id": "3",
+      "name": "8000"
+    }
+  ]
+}
