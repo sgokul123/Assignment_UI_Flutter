@@ -60,6 +60,7 @@ class WelcomeScreenController extends GetxController {
     super.dispose();
   }
 
+  ///Call validation from welcome screen and proceed to next screen if validation successful
   void validateInput() {
     CustomLogger.log(selectedIndex);
     if (selectedIndex == 0) {
@@ -83,6 +84,7 @@ class WelcomeScreenController extends GetxController {
     }
   }
 
+  ///On back press user should redirect to previous screen.
   void goToPreviousStep() {
     if (selectedIndex > 0) {
       selectedIndex--;
@@ -90,11 +92,13 @@ class WelcomeScreenController extends GetxController {
     }
   }
 
+  ///Proceed to next screen and update stepper index
   void goToNextStep() {
     stepInfoList[selectedIndex].state = StepperViewStepState.complete;
     selectedIndex++;
   }
 
+  ///On registration successful show dialog and exit from app
   void showAccountCreatedMessage() {
     DialogUtil.showCustomDialog(
         context: context,

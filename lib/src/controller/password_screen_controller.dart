@@ -44,6 +44,7 @@ class PasswordScreenController extends GetxController
   set containUpperCaseLetter(value) =>
       this._containUpperCaseLetter.value = value;
 
+  ///Check password validation of strong ,good, weak and very weak password
   void checkPasswordValidation(String newValue) {
     if (newValue != null && newValue.isNotEmpty) {
       Pattern smallCasePattern = r'([a-z])';

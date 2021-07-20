@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 class EmailScreenController extends GetxController {
   TextEditingController emailController = TextEditingController();
 
+  ///Validate Email to proceed next screen
   bool validateEmail() {
     if (emailController.text != null) {
       String regex =

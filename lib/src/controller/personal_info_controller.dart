@@ -31,6 +31,7 @@ class PersonalInfoController extends GetxController
   set selectedMonthlyExpense(value) =>
       this._selectedMonthlyExpense.value = value;
 
+  ///Validate monthly expense, monthly income and goal setting
   bool isValidFields() {
     if (selectedMonthlyExpense != null &&
         selectedGoalItem != null &&
@@ -42,6 +43,7 @@ class PersonalInfoController extends GetxController
       return false;
   }
 
+  ///Read json and parse into model to display in dropdown
   Future<DataModel> getDropDownDataModel() async {
     try {
       CustomLogger.log("_model");
@@ -56,6 +58,7 @@ class PersonalInfoController extends GetxController
     }
   }
 
+  ///Get Dropdown list item to display for selection
   List<DropdownMenuItem<String>> buildDropDownMenuItems(
       List<MonthlyExpenseModel> listItems) {
     List<DropdownMenuItem<String>> items = List.empty(growable: true);

@@ -38,12 +38,14 @@ class DateTimeController extends GetxController
     super.onClose();
   }
 
+  ///On date selection need to update same in date text controller
   void updateDateFunction(DateTime newDateTime) {
     selectedDate = newDateTime;
     dateController.text =
         "${selectedDate.timeZoneName}, ${selectedDate.day} ${Utils.getMonth(selectedDate.month)} ${selectedDate.year}";
   }
 
+  ///On time selection change same in time text controller
   void updateTimeFunction(TimeOfDay selectedTime) {
     String _hour, _minute, _time;
     _hour = selectedTime.hour.toString();
@@ -52,6 +54,7 @@ class DateTimeController extends GetxController
     timeController.text = _time;
   }
 
+  ///Validate input details to proceed further
   bool isValidInput() {
     if (timeController.text != null && dateController != null) {
       return timeController.text.isNotEmpty && dateController.text.isNotEmpty;
